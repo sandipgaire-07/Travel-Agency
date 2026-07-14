@@ -46,3 +46,20 @@ h6 {
 .text-shadow-hero {
   text-shadow: 0 6px 20px rgb(2 6 23 / 0.45);
 }
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}

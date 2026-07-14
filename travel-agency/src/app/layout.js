@@ -3,6 +3,7 @@ import "./globals.css";
 import "aos/dist/aos.css";
 import Navbar from "./Components/Nav";
 import AOSProvider from "./Components/AosProvider";
+import Footer from "./Components/Footer";
 
 const playfairDisplay = Playfair_Display({
   variable: "--font-heading",
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
         <AOSProvider />
         <Navbar />
         {children}
+        <Footer />
       </body>
     </html>
   );

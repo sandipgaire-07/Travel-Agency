@@ -21,7 +21,7 @@ function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-30 border-b border-teal-100/70 bg-white/85 backdrop-blur-md">
+      <nav className="sticky top-0 z-40 border-b border-teal-100/70 bg-white/85 backdrop-blur-md">
         <div className="container mx-auto flex items-center justify-between px-6 py-4">
           <div className="flex items-center gap-2">
             <PlaneTakeoffIcon className="h-6 w-6 text-amber-500" />
@@ -59,14 +59,14 @@ function Navbar() {
       </nav>
 
       <div
-        className={`fixed inset-0 z-40 bg-slate-950/50 transition-opacity duration-300 md:hidden ${
+        className={`fixed inset-0 z-50 bg-slate-950/50 transition-opacity duration-300 md:hidden ${
           isOpened ? "opacity-100" : "pointer-events-none opacity-0"
         }`}
         onClick={() => setIsOpened(false)}
       />
 
       <div
-        className={`fixed right-0 top-0 z-50 h-screen w-72 bg-white px-6 py-6 shadow-xl transition-transform duration-300 ease-in-out md:hidden ${
+        className={`fixed right-0 top-0 z-60 h-screen w-72 bg-white px-6 py-6 shadow-xl transition-transform duration-300 ease-in-out md:hidden ${
           isOpened ? "translate-x-0" : "pointer-events-none translate-x-full"
         }`}
       >

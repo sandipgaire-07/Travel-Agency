@@ -16,15 +16,15 @@ function Hero() {
   return (
     <section className="relative h-screen min-h-[100svh]">
       <div
-        className="absolute inset-0 bg-cover bg-center transition-all duration-1000"
+        className="absolute inset-0 bg-cover overflow-hidden bg-center transition-all duration-1000"
         style={{
           backgroundImage: `url(${heroSlides[current].image})`,
         }}
       ></div>
 
-      <div className="absolute inset-0 bg-black/45"></div>
+      <div className="absolute z-20 inset-0 bg-black/45"></div>
 
-      <div className="relative flex items-center min-h-[100svh] px-6 md:px-16">
+      <div className="relative z-30 flex items-center min-h-[100svh] px-6 md:px-16">
         <div className="max-w-3xl text-white" data-aos="fade-up">
           <h1 className="text-shadow-hero font-[var(--font-heading)] text-4xl font-bold leading-tight md:text-6xl">
             Explore the world!!
