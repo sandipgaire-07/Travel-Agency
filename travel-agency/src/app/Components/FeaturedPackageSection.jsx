@@ -3,9 +3,12 @@ import packages from "../data/packge";
 import PackageCard from "./PackageCard";
 import { useState } from "react";
 import BookingForm from "./BookingForm";
+import { ArrowRight } from "lucide-react";
 
 function FeaturedPackage(){
   const[openBooking, setOpenBooking]=useState(false)
+  const[selected,setSelected]=useState(null)
+  
     return(
   <section className="py-20">
   <div className="mx-auto max-w-7xl px-6">
@@ -30,12 +33,26 @@ function FeaturedPackage(){
         <PackageCard
           key={pack.id}
           {...pack}
-          onBook={()=>setOpenBooking(true)}
+          onBook={()=>{
+            setSelected(pack)
+            setOpenBooking(true)
+          }
+          }
         />
       ))}
     </div>
+       <div className="mt-10 flex justify-center">
+  <button
+    className="group flex items-center gap-2 rounded-full bg-teal-600 px-6 py-3 font-semibold text-white transition hover:bg-teal-700"
+  >
+    View More Packages
+    <ArrowRight 
+      className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
+    />
+  </button>
+</div>
   </div>
-  {openBooking && (<BookingForm open={openBooking} close={()=>setOpenBooking(false)} />)}
+  {openBooking && (<BookingForm open={openBooking} destination={selected} close={()=>setOpenBooking(false)} />)}
 </section>
     )
 }

@@ -1,6 +1,7 @@
 "use client";
 import { MenuIcon, XIcon, PlaneTakeoffIcon } from "lucide-react";
 import { useEffect, useState } from "react";
+import navLinks from "../data/navlink";
 
 function Navbar() {
   const [isOpened, setIsOpened] = useState(false);
@@ -30,15 +31,14 @@ function Navbar() {
             </span>
           </div>
 
-          {/* Desktop links */}
           <div className="hidden items-center gap-10 md:flex">
-            {links.map((link) => (
+            {navLinks.map((link,index) => (
               <a
-                key={link}
-                href=""
+                key={index}
+                href={link.href}
                 className="group relative text-sm font-semibold uppercase tracking-wide text-slate-700 transition-colors hover:text-teal-800"
               >
-                {link}
+                {link.name}
                 <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-amber-500 transition-all duration-300 group-hover:w-full" />
               </a>
             ))}

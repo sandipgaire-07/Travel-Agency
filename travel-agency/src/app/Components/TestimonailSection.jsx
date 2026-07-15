@@ -3,13 +3,13 @@ import TestimonailCard from "./TestimonailCard";
 
 function TestimonialSection(){
     return(
-        <section className="py-20">
-        <div className="max-w-7xl mx-auto px-6">
+    <section className="py-20">
+    <div className="max-w-7xl mx-auto px-6">
     <div className="mx-auto max-w-2xl text-center">
 
-  <p className="font-semibold uppercase tracking-wide text-teal-600">
+  {/* <p className="font-semibold uppercase tracking-wide text-teal-600">
     Testimonials
-  </p>
+  </p> */}
 
   <h2 className="mt-4 text-4xl font-bold text-slate-900 md:text-5xl">
     What Our Travelers Say

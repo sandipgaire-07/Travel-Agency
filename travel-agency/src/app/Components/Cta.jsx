@@ -1,8 +1,6 @@
-"use client"
-import { useState } from "react";
-import BookingForm from "./BookingForm";
+import { ArrowRight } from "lucide-react";
+
 function CTA() {
-  const[openBooking, setOpenBooking]=useState(false)
   return (
 
     <section
@@ -12,7 +10,7 @@ function CTA() {
       }}
     >
       <div className="absolute inset-0 bg-black/50"></div>
-      <div className="relative mx-auto max-w-3xl px-6 text-center text-white sm:px-8">
+      <div className="relative mx-auto max-w-3xl px-6 text-center flex flex-col items-center text-white sm:px-8">
 
         <h2 className="text-3xl font-bold leading-tight sm:text-4xl md:text-5xl">
           Ready for your next adventure?
@@ -21,13 +19,13 @@ function CTA() {
           Explore breathtaking destinations and create unforgettable memories
           with us.
         </p>
-        <button onClick={()=>setOpenBooking(true)}
-          className="mt-8 rounded-full bg-teal-600 px-7 py-3 text-sm font-semibold text-white transition  hover:bg-teal-700 sm:px-8 sm:text-base" >
-          Book Your Trip
+        <button
+          className="mt-8 flex gap-2 rounded-full bg-teal-600 px-7 py-3 text-sm font-semibold text-white transition  hover:bg-teal-700 sm:px-8 sm:text-base" >
+          Explore package <ArrowRight />
         </button>
 
       </div>
-              {openBooking && (<BookingForm open={openBooking} close={()=>setOpenBooking(false)}/>)}
+            
     </section>
    
   );

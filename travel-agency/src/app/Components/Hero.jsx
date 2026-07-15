@@ -38,7 +38,7 @@ function Hero() {
         </div>
       </div>
 
-      <div className="absolute bottom-8 left-1/2 flex -translate-x-1/2 gap-3">
+      <div className="absolute z-30 bottom-8 left-1/2 flex -translate-x-1/2 gap-3">
         {heroSlides.map((slide, index) => (
           <button
             key={slide.id ?? index}
