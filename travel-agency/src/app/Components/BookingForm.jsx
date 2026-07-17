@@ -54,7 +54,7 @@ function BookingForm({open,close,destination}){
           Fill the form below
         </p>
         <form  onSubmit={handleSubmit(onSubmit)} className="mt-6 grid md:grid-cols-2 gap-4">
-          <Input placeholder="Your Name"
+          <Input type="text" placeholder="Enter your Name"
           register={register("Name",{
             required:"Name is Required",
           })} errors={errors.Name}/>
@@ -104,7 +104,7 @@ function BookingForm({open,close,destination}){
             type="text"
             rows={4}
             placeholder="Additional message (Optional)"
-            className="w-full md:col-span-2 resize-y rounded-lg border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-teal-600"
+            className="w-full md:col-span-2  rounded-lg border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-teal-600"
             register={register("AdditonalMessage")}
           />
 

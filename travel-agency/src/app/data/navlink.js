@@ -9,11 +9,11 @@ const navLinks = [
   },
   {
     name: "Tickets",
-    href: "/packages"
+    href: "/"
   },
    {
     name: "Packages",
-    href: "/packages"
+    href: "/package"
   },
   {
     name: "Contact",

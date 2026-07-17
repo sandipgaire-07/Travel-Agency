@@ -1,6 +1,6 @@
 import Image from "next/image"; 
 import { Clock, MapPin } from "lucide-react";
-
+import Link from "next/link";
 function PackageCard({
   title,
   location,
@@ -9,16 +9,17 @@ function PackageCard({
   popular,
   duration,
   onBook,
+  id
 }) {
   return (
     <div className="group overflow-hidden rounded-2xl bg-white shadow-lg transition hover:shadow-2xl">
-      <div className="relative h-[320px] overflow-hidden">
+      <div className="relative h-80 overflow-hidden">
         <img
           src={image}
           alt={title}
-          className=" h-[320px] w-full object-cover transition duration-500 group-hover:scale-110"
+          className=" h-80 w-full object-cover transition duration-500 group-hover:scale-110"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-linear-to-t from-black/75 via-black/20 to-transparent" />
 
         {popular && (
           <span className="absolute left-4 top-4 rounded-full bg-teal-600 px-4 py-1 text-sm font-semibold text-white">
@@ -45,9 +46,9 @@ function PackageCard({
         
         <div className="mt-5 flex gap-3">
 
-          <button className="flex-1 rounded-lg border border-teal-600 px-4 py-2 text-sm font-semibold text-teal-600 transition hover:bg-teal-50">
+          <Link href= {`/package/${id}`}className="flex-1 rounded-lg border border-teal-600 px-4 py-2 text-sm text-center font-semibold text-teal-600 transition hover:bg-teal-50">
             View Details
-          </button>
+          </Link>
           <button className="flex-1 rounded-lg bg-teal-600 px-4 py-2 text-sm font-semibold text-white transition hover:bg-teal-700" onClick={onBook}>
             Book Now
           </button>

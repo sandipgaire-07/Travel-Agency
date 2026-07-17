@@ -19,12 +19,7 @@ function AboutusHero(){
         with comfortable planning and memorable experiences.
       </p>
     </div>
-
             </div>
-
-
-            
-
          </section>
     )
 }
