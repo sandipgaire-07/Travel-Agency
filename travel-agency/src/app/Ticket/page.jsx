@@ -9,6 +9,9 @@ function TicketPage(){
     return(
         <>
          <section className="py-20">
+            <p className="font-semibold text-center uppercase tracking-wide text-teal-600">
+              Tickets Available
+          </p>
             <h1 className="Font-bold text-slate-900 text-3xl md:text-5xl text-center">Book Your Tickets</h1>
             <p className="mt-6 leading-8 text-slate-600 text-center">
            Reserve domestic and international flights, bus tickets, and cable car rides with ease.

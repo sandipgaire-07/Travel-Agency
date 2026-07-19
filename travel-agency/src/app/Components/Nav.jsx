@@ -5,9 +5,7 @@ import navLinks from "../data/navlink";
 
 function Navbar() {
   const [isOpened, setIsOpened] = useState(false);
-
-  const links = ["Home", "About us", "Ticket", "Package", "Contact Us"];
-
+  
   useEffect(() => {
     if (isOpened) {
       document.body.style.overflow = "hidden";
@@ -87,13 +85,13 @@ function Navbar() {
         </div>
 
         <div className="mt-8 flex flex-col gap-1">
-          {links.map((link) => (
+          {navLinks.map((link,index) => (
             <a
-              key={link}
-              href=""
+              key={index}
+              href={link.href}
               className="rounded-lg px-3 py-3 text-sm font-semibold uppercase tracking-wide text-slate-700 transition-colors hover:bg-teal-50 hover:text-teal-800"
             >
-              {link}
+              {link.name}
             </a>
           ))}
 

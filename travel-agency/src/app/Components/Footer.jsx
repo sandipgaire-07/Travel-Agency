@@ -1,4 +1,5 @@
 import { Mail, MapPin, Phone } from "lucide-react";
+import navLinks from "../data/navlink";
 
 function Footer(){
     return(
@@ -17,15 +18,16 @@ function Footer(){
                  <h4 className="text-lg font-semibold text-white">
                    Quick Links
                     </h4>
-                    <ul className="mt-4 space-y-3 text-sm">
-                     <li>Home</li>
-                     <li>Destinations</li>
-                      <li>Packages</li>
-                      <li>Contact</li>
-                        </ul>
+                    <div className="mt-4 flex flex-col gap-3 text-sm">
+                     {
+                      navLinks.map((nav,index)=>(
+                        <a key={index} href={nav.href}>{nav.name}</a>
+                      ))
+                     }
+                        </div>
                        </div>
-                       <div>
 
+                    <div>
                    <h4 className="text-lg font-semibold text-white">
                         Contact
                     </h4>
@@ -45,7 +47,7 @@ function Footer(){
                         </div>
                         </div>
                      </div>
-                     <div className="border-t border-slate-700/50">
+                     <div className="mt-2 border-t border-slate-700">
   <div className="mx-auto flex max-w-7xl flex-col items-center justify-between gap-3 px-6 py-6 text-center text-sm text-slate-400 sm:flex-row sm:text-left">
     <p>
       © 2026 Wayfare. All rights reserved.

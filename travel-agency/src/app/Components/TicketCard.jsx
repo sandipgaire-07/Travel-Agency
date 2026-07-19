@@ -1,6 +1,6 @@
 function TicketCard({ticket, onBook}){
     return(
-        <div className="group rounded-3xl shadow-lg  bg-white transition hover:-translate-y-2 px-4 py-3">
+        <div className="group rounded-3xl shadow-lg  bg-white transition hover:-translate-y-2 px-4 py-3" data-aos="fade-up">
             <div className="w-full h-72 rounded-xl overflow-hidden">
                 <img src={ticket.image} alt="" className="w-full h-full object-cover transition duration-300 group-hover:scale-100"/>
             </div>

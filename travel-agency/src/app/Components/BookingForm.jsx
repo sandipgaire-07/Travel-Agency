@@ -48,13 +48,16 @@ function BookingForm({open,close,destination}){
         <XIcon size={25} onClick={close}/>
           </div>
       
-        <form  onSubmit={handleSubmit(onSubmit)} className="mt-4 h-100 grid gap-2 md:grid-cols-2 overflow-y-auto">
-          <Input type="text" placeholder="Enter your Name"
+        <form  onSubmit={handleSubmit(onSubmit)} className="mt-4 h-120 grid gap-2 md:grid-cols-2 overflow-y-auto">
+          <Input
+          label="Full Name"
+           type="text" placeholder="Enter your Name"
           register={register("Name",{
             required:"Name is Required",
           })} errors={errors.Name}/>
 
           <Input
+             label="Email"
             type="email"
             placeholder="Email Address"
             register={register("email",{
@@ -63,6 +66,7 @@ function BookingForm({open,close,destination}){
           />
 
           <Input
+          label="Phone Number"
             type="tel"
             placeholder="Phone Number"
           register={register("PhoneNumber",{
@@ -70,20 +74,27 @@ function BookingForm({open,close,destination}){
           })} errors={errors.PhoneNumber}
           />
 
-          <Input placeholder="Destination" defaultValue={destination?.location}  register={register("destination",{
+          <Input 
+          label="Destination"
+          placeholder="Destination" defaultValue={destination?.location}  register={register("destination",{
             required:"destination is required"
           })}  errors={errors.destination}/>
 
-          <Input placeholder="duration" defaultValue={destination?.duration}  register={register("Duration",{
+          <Input
+          label="Duration"
+           placeholder="duration" defaultValue={destination?.duration}  register={register("Duration",{
             required:"Duration is required."
           })} errors={errors.destination} />
 
 
-          <Input type="date" register={register("date",{
+          <Input
+           label="Date"
+           type="date" register={register("date",{
               required:"Date is Required",
           })} errors={errors.date}/>
 
           <Input
+            label="Number Of Travelers"
             type="number"
             placeholder="NumberOfTravelers"
             register={register("No_Of_Travelers",{
@@ -96,6 +107,7 @@ function BookingForm({open,close,destination}){
           />
 
            <textarea
+           label="Additional Message"
             type="text"
             rows={5}
             placeholder="Additional message (Optional)"
@@ -104,8 +116,9 @@ function BookingForm({open,close,destination}){
           />
 
           <button type="submit"
+        
             className="rounded-lg mt-2 bg-teal-600 py-3 px-4 font-semibold text-white transition hover:bg-teal-700 sm:col-span-2">
-            Submit Booking
+             Submit Booking
           </button>
         </form>
 
