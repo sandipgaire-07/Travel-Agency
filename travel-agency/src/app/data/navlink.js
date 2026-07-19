@@ -9,7 +9,7 @@ const navLinks = [
   },
   {
     name: "Tickets",
-    href: "/"
+    href: "/Ticket"
   },
    {
     name: "Packages",

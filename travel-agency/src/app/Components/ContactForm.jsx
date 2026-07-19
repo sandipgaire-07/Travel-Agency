@@ -35,7 +35,7 @@ function ContactForm() {
         <textarea
           rows={5}
           placeholder="Your Message"
-          className="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-teal-600 md:col-span-2"
+          className="w-full rounded-lg border border-slate-200 px-4 py-3 text-sm outline-none transition focus:border-teal-500 md:col-span-2"
         />
 
         <button

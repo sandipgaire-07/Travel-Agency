@@ -22,8 +22,8 @@ function Navbar() {
 
   return (
     <>
-      <nav className="sticky top-0 z-40 border-b border-teal-100/70 bg-white/85 backdrop-blur-md">
-        <div className="container mx-auto flex items-center justify-between px-6 py-4">
+      <nav className="fixed w-full top-0 z-40 border-b border-teal-100/70 bg-white/85 backdrop-blur-md">
+        <div className="container mx-auto max-w-7xl  flex items-center justify-between px-6 py-4">
           <div className="flex items-center gap-2">
             <PlaneTakeoffIcon className="h-6 w-6 text-amber-500" />
             <span className="text-shadow-soft font-[var(--font-heading)] text-2xl font-semibold tracking-tight text-teal-900">

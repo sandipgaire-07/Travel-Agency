@@ -1,7 +1,5 @@
 import { MapPin, Clock, DollarSign } from "lucide-react";
-
 function PackageOverview({pkg}){
-
   return(
       <div className="mt-10 mx-auto max-w-7xl px-6" data-aos="fade-up">
         <div className="rounded-3xl bg-white p-8 shadow-lg">

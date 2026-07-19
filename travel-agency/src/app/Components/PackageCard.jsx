@@ -1,5 +1,5 @@
 import Image from "next/image"; 
-import { Clock, MapPin } from "lucide-react";
+import { Clock, IndianRupee, MapPin } from "lucide-react";
 import Link from "next/link";
 function PackageCard({
   title,
@@ -39,10 +39,10 @@ function PackageCard({
           <Clock size={16}/>
           {duration}
         </div>
-        <p className="mt-4 text-2xl font-bold text-teal-700">
-          ${price}
-        </p>
-
+        <div className="mt-2 flex items-center gap-2 text-sm text-slate-500">
+          <IndianRupee size={16}/>
+          {price}
+        </div>
         
         <div className="mt-5 flex gap-3">
 

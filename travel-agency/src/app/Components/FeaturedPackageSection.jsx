@@ -4,6 +4,7 @@ import PackageCard from "./PackageCard";
 import { useState } from "react";
 import BookingForm from "./BookingForm";
 import { ArrowRight } from "lucide-react";
+import Link from "next/link";
 
 function FeaturedPackage(){
   const[openBooking, setOpenBooking]=useState(false)
@@ -42,7 +43,8 @@ function FeaturedPackage(){
       ))}
     </div>
        <div className="mt-10 flex justify-center">
-  <button
+        <Link href={`/package/`}>
+        <button
     className="group flex items-center gap-2 rounded-full bg-teal-600 px-6 py-3 font-semibold text-white transition hover:bg-teal-700"
   >
     View More Packages
@@ -50,6 +52,8 @@ function FeaturedPackage(){
       className="h-5 w-5 transition-transform duration-300 group-hover:translate-x-1"
     />
   </button>
+        </Link>
+  
 </div>
   </div>
   {openBooking && (<BookingForm open={openBooking} destination={selected} close={()=>setOpenBooking(false)} />)}
